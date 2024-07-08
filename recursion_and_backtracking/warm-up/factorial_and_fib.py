@@ -16,4 +16,15 @@ def fib(n):
     return fib(n-2) + fib(n-1)
 
 
-print(fib(7))
+# print(fib(7))
+
+def print_to_n(i, n):
+    """
+    print from 1 to n using recursion
+    """
+    print(i)
+    if i == n:
+        return
+    print_to_n(i+1, n)
+    
+print_to_n(1, 10)
