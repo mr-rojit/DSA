@@ -14,6 +14,7 @@ S  #  #  #  #  #
 """
 
 def count_ways(start, dest, visited=None):
+    
 
     if not visited:
         visited = set()
