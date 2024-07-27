@@ -18,7 +18,6 @@ Example 3:
 Input: arr = [0,10,5,2]
 Output: 1
 """
-
 def find_peak(arr):
     low, high = 0, len(arr) -1
 
