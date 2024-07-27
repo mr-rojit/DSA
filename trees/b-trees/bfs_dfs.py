@@ -14,6 +14,7 @@ c = Node('C')
 d = Node('D')
 e = Node('E')
 f = Node('F')
+g = Node('G')
 
 
 a.left= b
@@ -21,6 +22,18 @@ a.right = c
 b.left=d
 b.right=e
 c.left=f
+d.left=g
+
+"""
+        A
+      /   \
+     B      C
+    /  \    /
+   D    E   F
+  /
+ G
+
+"""
 
 
 def bfs(node):
@@ -52,5 +65,21 @@ def dfs(node):
         if current.right:
             stack.append(current.right)
 
-dfs(a)
+# dfs(a)
 
+
+
+def dfs_recursive(node):
+
+    print(node.data)
+    
+    if not node.left and not node.right:
+        return
+    
+    if node.left:
+        left = dfs_recursive(node.left)
+
+    if node.right:
+        right = dfs_recursive(node.right)
+
+dfs_recursive(a)
