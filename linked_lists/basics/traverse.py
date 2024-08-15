@@ -1,4 +1,4 @@
-class LinkedList:
+class Node:
 
     def __init__(self, data):
         self.data = data
@@ -8,10 +8,10 @@ class LinkedList:
         return str(self.data)
     
 
-a = LinkedList('A')
-b = LinkedList('B')
-c = LinkedList('C')
-d = LinkedList('D')
+a = Node('A')
+b = Node('B')
+c = Node('C')
+d = Node('D')
 
 a.next = b
 b.next = c
@@ -31,10 +31,12 @@ def traverse_recursive(node):
     print(node.data)
     traverse_recursive(node.next)
 
+head = a
 
-traverse_linkedlist(a)
 
-# traverse_recursive(a)
+traverse_linkedlist(head)
+
+# traverse_recursive(head)
 
 
 

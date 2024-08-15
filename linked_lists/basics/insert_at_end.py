@@ -1,4 +1,4 @@
-class LinkedList:
+class Node:
 
     def __init__(self, data):
         self.data = data
@@ -8,10 +8,10 @@ class LinkedList:
         return str(self.data)
     
 
-a = LinkedList('A')
-b = LinkedList('B')
-c = LinkedList('C')
-d = LinkedList('D')
+a = Node('A')
+b = Node('B')
+c = Node('C')
+d = Node('D')
 
 a.next = b
 b.next = c
@@ -32,16 +32,18 @@ def insert_at_end(node, data):
     
     while temp.next:
         temp = temp.next
-    new_node = LinkedList(data)
+    new_node = Node(data)
     temp.next = new_node
 
-print("Before Inserting")
-traverse_linkedlist(a)
+head = a
 
-insert_at_end(a, 'E')
+print("Before Inserting")
+traverse_linkedlist(head)
+
+insert_at_end(head, 'E')
 
 print("After Inserting")
-traverse_linkedlist(a)
+traverse_linkedlist(head)
 
 
 

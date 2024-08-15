@@ -1,4 +1,4 @@
-class LinkedList:
+class Node:
 
     def __init__(self, data):
         self.data = data
@@ -8,10 +8,10 @@ class LinkedList:
         return str(self.data)
     
 
-a = LinkedList(10)
-b = LinkedList(6)
-c = LinkedList(2)
-d = LinkedList(3)
+a = Node(10)
+b = Node(6)
+c = Node(2)
+d = Node(3)
 
 a.next = b
 b.next = c
@@ -25,4 +25,6 @@ def sum_node(node):
     val = sum_node(node.next)
     return val + node.data
 
-print(sum_node(a))
+head = a
+
+print(sum_node(head))

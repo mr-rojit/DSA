@@ -1,25 +1,25 @@
-class LinkedList:
+class Node:
 
     def __init__(self, data):
         self.data = data
-        self.next:LinkedList | None = None
+        self.next:Node | None = None
 
     def __str__(self):
         return str(self.data)
     
 
-a = LinkedList('A')
-b = LinkedList('B')
-c = LinkedList('C')
-d = LinkedList('D')
+a = Node('A')
+b = Node('B')
+c = Node('C')
+d = Node('D')
 
 a.next = b
 b.next = c
 c.next = d
 
 
-def insert_at_beginning(head: LinkedList, data):
-    new_node = LinkedList(data)
+def insert_at_beginning(head: Node, data):
+    new_node = Node(data)
     new_node.next = head
     return new_node
 
