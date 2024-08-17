@@ -10,7 +10,7 @@ class Node:
 
 a = Node('A')
 b = Node('B')
-c = Node('C')
+c = Node('B')
 d = Node('D')
 
 a.next = b
@@ -34,8 +34,10 @@ def delete_node(head, val):
         temp = temp.next
 
     while temp and temp.next:
+
         if temp.next.data == val:
             temp.next = temp.next.next
+            
             temp = temp.next
         else:
             temp = temp.next
@@ -43,7 +45,7 @@ def delete_node(head, val):
     return head
 head = a
 
-head = delete_node(head, 'a')
+head = delete_node(head, 'B')
 
 traverse(head)
 
