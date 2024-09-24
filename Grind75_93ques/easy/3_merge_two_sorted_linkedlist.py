@@ -21,11 +21,26 @@ Output: [0]
 
 def merge(lst1, lst2):
     new_lst = []
+    n1, n2 = len(lst1), len(lst2)
+    n = min(n1, n2)
+    p1, p2 = 0, 0
+
+    new_list = []
+
+    while p1 < n:
+        if lst1[p1] <= lst2[p2]:
+            new_list.append(lst1[p1])
+            p1+=1
+        else:
+            new_list.append(lst2[p2])
+            p2 += 1
     
+    new_list += lst2[p2:]
+    print(new_list)
 
 
 
-list1 = [1,2,4]
-list2 = [1,3,4]
+list1 = [1,2,4,5]
+list2 = [1,3,4,7,8]
 
 merge(list1, list2)
