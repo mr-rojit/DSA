@@ -32,11 +32,20 @@ def majority_element(nums):
         if c > freq:
             return element
         
-            
-        
+def moores_voting_algo(nums):
+    item = None
+    freq = 0
     
+    for i in range(len(nums)):
+        if freq == 0:
+            item = nums[i]
+        if item == nums[i]:
+            freq +=1
+        else:
+            freq-=1
+    return item
             
 nums = [2,2,1,1,1,2,2]
-item = majority_element(nums)
+item = moores_voting_algo(nums)
 print(nums)
 print(item)
